@@ -58,10 +58,10 @@ public class BoardDAO {
 			
 			while(rs.next()){
 				int seq = rs.getInt("seq");
-				String title = rs.getString(1);
-				String writer = rs.getString(2);
-				String content = rs.getString(3);
-				String email = rs.getString(4);
+				String title = rs.getString(2);
+				String writer = rs.getString(3);
+				String content = rs.getString(4);
+				String email = rs.getString(5);
 				
 				BoardDTO mdto = new BoardDTO(seq,title,writer,content,email);
 				mdtos.add(mdto);

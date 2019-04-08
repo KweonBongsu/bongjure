@@ -41,7 +41,6 @@
   			<td>${board.writer}</td>
   			<td>${board.content}</td>
   			<td>${board.email}</td>
-  			<td>${board.email}</td>
   			<td>
   				<a href="bUpdateForm.do?email=${board.email}">수정</a>/
   				<a href="bRemove.do?email=${board.email}">삭제</a> 
