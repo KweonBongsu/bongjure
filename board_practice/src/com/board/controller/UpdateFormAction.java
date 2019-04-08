@@ -15,6 +15,8 @@ public class UpdateFormAction extends Action{
 			HttpServletRequest request, 
 			HttpServletResponse response)
 			throws Exception{
+		
+		
 		String email = request.getParameter("email");
 		BoardMGR mgr = BoardMGR.getInstance();
 		BoardDTO mdto = mgr.selectBoard(email);

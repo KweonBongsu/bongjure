@@ -18,7 +18,7 @@ public class UpdateAction extends Action{
 			HttpServletResponse response
 			)
 	throws Exception{
-		request.setCharacterEncoding("euc-kr");
+		request.setCharacterEncoding("UTF-8");
 		String title = request.getParameter("title");
 		String writer = request.getParameter("writer");
 		String content = request.getParameter("content");

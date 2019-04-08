@@ -17,7 +17,7 @@
 <c:set var="list" value="${requestScope.bList}"/>
 	<table cellpadding="0" cellspacing="0" border="1" width="900">
   		<tr>
-  			<td colspan="6" bgcolor="ffaaee" align="center">
+  			<td colspan="7" bgcolor="ffaaee" align="center">
   				<h3>게시판</h2>
   			</td>
   		</tr>
@@ -27,7 +27,8 @@
   			<td><b>글쓴이</b></td>
   			<td><b>내용</b></td>
   			<td><b>이메일</b></td>
-  			<td><b>수정/삭제</b></td>  			
+  			<td><b>수정/삭제</b></td>
+  			<td><b>상세보기</b></td>  			
   		</tr>
 <c:if test="${empty list}">
 	  	<tr>
@@ -36,14 +37,18 @@
 </c:if>
 <c:forEach var="board" items="${list}">	  	
   		<tr>
-  		    
+  		    <td>${board.seq}</td>
   		    <td>${board.title}</td>
   			<td>${board.writer}</td>
   			<td>${board.content}</td>
   			<td>${board.email}</td>
+  			
   			<td>
   				<a href="bUpdateForm.do?email=${board.email}">수정</a>/
   				<a href="bRemove.do?email=${board.email}">삭제</a> 
+  			</td>
+  			<td>
+  	         	<a href="bView.do?email=${board.email}">상세보기</a>
   			</td>  			
   		</tr>
 </c:forEach>  		

@@ -39,6 +39,12 @@
 		</action>
 		
 		
+		<!-- 상세 보기 -->
+		<action path="/bView" type="com.board.controller.ViewAction">
+		    <forward name="fw-bView" path="/board/boardView.jsp"></forward>
+		</action>
+		
+		
 		<action path="/postbUpdate" type="com.board.controller.UpdateAction"/>	
 				
 	</action-mappings>
