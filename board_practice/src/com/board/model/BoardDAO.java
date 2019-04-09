@@ -62,8 +62,11 @@ public class BoardDAO {
 				String writer = rs.getString(3);
 				String content = rs.getString(4);
 				String email = rs.getString(5);
+				int hit = rs.getInt(6);
+				hit++;
 				
-				BoardDTO mdto = new BoardDTO(seq,title,writer,content,email);
+				
+				BoardDTO mdto = new BoardDTO(seq,title,writer,content,email,hit);
 				mdtos.add(mdto);
 			}
 			
@@ -135,6 +138,7 @@ public class BoardDAO {
 			ps.setString(2, mdto.getWriter());
 			ps.setString(3, mdto.getContent());
 			ps.setString(4, mdto.getEmail());
+			
 			
 			return ps.executeUpdate();
 		}finally{

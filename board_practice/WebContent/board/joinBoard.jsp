@@ -50,9 +50,9 @@
 				<td><input type="text" name="email" placeholder="이메일"/></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><input type="button"
-					value="등록" onclick="join()" /> <input type="button" value="게시판 목록"
-					onclick="bList()" /></td>
+				<td colspan="2" align="center">
+				<input type="button" value="등록" onclick="join()" /> 
+				<input type="button" value="게시판 목록" onclick="bList()" /></td>
 			</tr>
 			</form>
 		</table>

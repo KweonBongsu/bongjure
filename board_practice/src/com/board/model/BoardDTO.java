@@ -7,19 +7,21 @@ public class BoardDTO {
 	private String writer;
 	private String content;
 	private String email;
+	private int hit;
 	
+	BoardDTO(){
+		
+	}
 	
-	
-	
-	public BoardDTO(int seq,String title, String writer, String content, String email) {
-		super();
+	public BoardDTO(int seq,String title, String writer, String content, 
+			String email, int hit) {
 		this.seq=seq;
 		this.title = title;
 		this.writer = writer;
 		this.content = content;
 		this.email = email;
+		this.hit=hit;
 	}
-	
 	
 	public BoardDTO(String title, String writer, String content, String email) {
 		this.title=title;
@@ -27,7 +29,20 @@ public class BoardDTO {
 		this.content=content;
 		this.email=email;
 	}
+	
+	
+	
+	
+	
+	
+	public int getHit() {
+		return hit;
+	}
 
+
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
 
 	public int getSeq() {
 		return seq;

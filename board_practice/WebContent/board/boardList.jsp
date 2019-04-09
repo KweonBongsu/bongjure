@@ -27,6 +27,7 @@
   			<td><b>글쓴이</b></td>
   			<td><b>내용</b></td>
   			<td><b>이메일</b></td>
+  			<td><b>조회수</b>
   			<td><b>수정/삭제</b></td>
   			<td><b>상세보기</b></td>  			
   		</tr>
@@ -42,13 +43,13 @@
   			<td>${board.writer}</td>
   			<td>${board.content}</td>
   			<td>${board.email}</td>
-  			
+  			<td>${board.hit}</td>
   			<td>
   				<a href="bUpdateForm.do?email=${board.email}">수정</a>/
   				<a href="bRemove.do?email=${board.email}">삭제</a> 
   			</td>
   			<td>
-  	         	<a href="bView.do?email=${board.email}">상세보기</a>
+  	         <a href="bView.do?idx=${board.idx}">상세보기</a>
   			</td>  			
   		</tr>
 </c:forEach>  		

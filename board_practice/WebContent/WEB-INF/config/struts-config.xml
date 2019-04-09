@@ -5,6 +5,7 @@
 <struts-config>
 	<global-forwards>
 		<forward name="g-boardMsg" path="/board/bMsg.jsp"/>		
+		<forward name="g-memberMsg" path="/member/mMsg.jsp"></forward>
 	</global-forwards>
 	
 	<action-mappings>		
@@ -20,7 +21,7 @@
 			
 			
 			<!-- 글쓰기 등록 눌렀을경우 -->
-		<action path="/post-join" type="com.board.controller.InsertAction"/>
+		<action path="/post-join1" type="com.board.controller.InsertAction"/>
 		
 		
 		<action path="/bList" type="com.board.controller.GetListAction">
@@ -46,6 +47,16 @@
 		
 		
 		<action path="/postbUpdate" type="com.board.controller.UpdateAction"/>	
+				
+				
+				
+	
+	  <!--  회원가입 ajax 사용 -->		
+		
+	  <action path="/mReg" forward="/member/member.jsp"></action>	
+	  <action path="/post-join2" type="com.member.controller.InsertActon"></action>
+	  
+				
 				
 	</action-mappings>
 	

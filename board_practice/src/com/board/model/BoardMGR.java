@@ -1,6 +1,7 @@
 package com.board.model;
 
 import java.sql.SQLException;
+
 import java.util.ArrayList;
 
 public class BoardMGR {

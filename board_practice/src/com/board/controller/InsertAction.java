@@ -1,12 +1,8 @@
 package com.board.controller;
 
 import javax.servlet.http.HttpServletRequest;
-
-
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.struts.action.*;
-
 import com.board.model.BoardDTO;
 import com.board.model.BoardMGR;
 
